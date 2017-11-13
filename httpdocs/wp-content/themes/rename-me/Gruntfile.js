@@ -29,9 +29,9 @@ module.exports = function(grunt) {
 					single: 'source/scss/single'
 				},
 
-				img: {
-					svg: 'source/svgs',
-					img: 'source/img'
+				svg: {
+					source: 'source/svgs',
+					dist: 'dist/svgs'
 				}
 			}
 		}
