@@ -23,3 +23,16 @@
 	object-fit: cover;
 	font-family: 'object-fit: cover;';
 }
+
+
+//----------------------
+// Visibility
+//----------------------
+.m\:hide-safe {
+	width: 1px;
+	height: 1px;
+	position: fixed;
+	top: -50px;
+	left: -50px;
+	overflow: hidden;
+}
