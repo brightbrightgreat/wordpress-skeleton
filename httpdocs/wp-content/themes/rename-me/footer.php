@@ -7,14 +7,16 @@
  */
 
 ?>
-				</div>
+
 			</main>
 
 			<!-- ==============================================
 				FOOTER
 			=============================================== -->
-			<footer>
-
+			<footer class="footer">
+				<a href="https://brightbrightgreat.com" target="_blank" alt="Designed By Bright Bright Great">
+					<?=\bbg\wp\common\utility::get_icon('bbg')?>
+				</a>
 			</footer>
 		</div><!-- /.l_frame -->
 
