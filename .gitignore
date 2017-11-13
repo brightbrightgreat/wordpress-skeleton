@@ -17,3 +17,7 @@ source/*.css
 *.psd
 *.ai
 *.gz
+
+# Lock Files
+**/package-lock.json
+**/composer.lock
