@@ -1,0 +1,37 @@
+//----------------------
+// Wordpress-specific styles
+//----------------------
+.wp-caption { width: auto!important; }
+
+.alignright,
+.alignleft,
+.aligncenter {
+	&, & img { width: auto; max-width: 100%; }
+}
+
+.alignright {
+	margin-left: 2em;
+	float: right;
+	img { margin-left: auto; }
+}
+
+.alignleft {
+	margin-right: 2em;
+	float: left;
+}
+
+.aligncenter {
+	margin: 2em auto;
+	text-align: center;
+	clear: both;
+	img { display: inline-block; }
+}
+
+.alignnone {
+	margin: 2em 0;
+	clear: both;
+}
+
+.wp-caption-text {
+	margin-bottom: 1em!important;
+}

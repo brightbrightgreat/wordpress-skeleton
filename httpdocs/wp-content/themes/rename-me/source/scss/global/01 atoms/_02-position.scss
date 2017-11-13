@@ -1,0 +1,46 @@
+//-----------------------------------------------------------
+// POSITION
+//-----------------------------------------------------------
+//----------------------
+// Position types
+//----------------------
+.p\:s { position: static }
+.p\:r { position: relative; }
+.p\:a { position: absolute; }
+.p\:f { position: fixed; }
+
+// break points for positions types.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&p\:s { position: static }
+			&p\:r { position: relative; }
+			&p\:a { position: absolute; }
+			&p\:f { position: fixed; }
+		}
+	}
+}
+
+
+//----------------------
+// Top.
+//----------------------
+.p_t\:0 { top: 0; }
+
+
+//----------------------
+// Right.
+//----------------------
+.p_r\:0 { right: 0; }
+
+
+//----------------------
+// Bottom.
+//----------------------
+.p_b\:0 { bottom: 0; }
+
+
+//----------------------
+// Left.
+//----------------------
+.p_l\:0 { left: 0; }

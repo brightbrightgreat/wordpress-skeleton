@@ -1,0 +1,40 @@
+//-----------------------------------------------------------
+// BASE
+//-----------------------------------------------------------
+body {
+	background: white;
+	color: black;
+	font-family: $sans-base;
+}
+
+a {
+	border-bottom: 2px solid transparent;
+	text-decoration: none;
+	color: blue;
+	transition: all map-get($transition-times, reg);
+	&:hover { color: red; }
+}
+
+input,
+textarea,
+select,
+label {
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+input,
+textarea {
+	@include placeholderStyles() {
+		color: inherit;
+		opacity: 1;
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	transition: all map-get($transition-times, reg);
+}

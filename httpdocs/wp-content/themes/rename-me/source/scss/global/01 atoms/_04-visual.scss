@@ -1,0 +1,51 @@
+//-----------------------------------------------------------
+// VISUAL
+//-----------------------------------------------------------
+//----------------------
+// Background Colors.
+//----------------------
+@each $name, $color in $colors {
+	@each $number, $shade in $color {
+		.v_bg\:#{$name}-#{$number},
+		.v_hbg\:#{$name}-#{$number}:hover,
+		.u_hp:hover .v_hbg_#{$name}-#{$number} {
+			background-color: $shade;
+		}
+	}
+}
+
+
+//----------------------
+// Borders
+//----------------------
+// border base
+.v_border { border: 2px solid currentColor; }
+.v_border\:t { border-top: 2px solid currentColor; }
+.v_border\:r { border-right: 2px solid currentColor; }
+.v_border\:b { border-bottom: 2px solid currentColor; }
+.v_border\:l { border-left: 2px solid currentColor; }
+
+// border colors
+@each $name, $color in $colors {
+	@each $number, $shade in $color {
+		.v_border\:#{$name}-#{$number},
+		.v_hborder\:#{$name}-#{$number}:hover,
+		.u_hp:hover .v_hborder_#{$name}-#{$number} {
+			border-color: $shade;
+		}
+	}
+}
+
+
+//----------------------
+// Opacity
+//----------------------
+.v_o\:0 { opacity: 0; }
+.v_o\:1 { opacity: 1; }
+
+
+//----------------------
+// Visbility
+//----------------------
+.v_v\:v { visibility: visible; }
+.v_v\:h { visibility: hidden; }

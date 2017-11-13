@@ -1,0 +1,30 @@
+# Where we tell Grunt what to do when we type "grunt" into the terminal
+# $ grunt
+default:
+  - 'css'
+  - 'javascript'
+  - 'svgs'
+  - 'php'
+
+# Our stylesheet related tasks
+css:
+  - 'sass_globbing'
+  - 'sass'
+  - 'postcss'
+  - 'modernizr'
+  - compress
+
+# Our script related tasks
+javascript:
+  - 'jshint'
+  - 'uglify'
+  - 'modernizr'
+  - 'compress'
+
+# Image related tasks
+svgs:
+  - 'svgmin'
+
+# Php tasks
+php:
+  - 'blobphp:check'

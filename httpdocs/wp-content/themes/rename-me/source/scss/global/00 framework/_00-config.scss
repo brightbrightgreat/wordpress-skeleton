@@ -1,0 +1,96 @@
+//-----------------------------------------------------------
+// CONFIG
+//-----------------------------------------------------------
+//----------------------
+// Colors.
+//----------------------
+// use with color mixin. 400 is default.
+
+// EXAMPLE:
+// background: color('grey', 200);
+// color: color('grey');
+
+$colors: (
+	'white': (
+		400: #ffffff
+	),
+
+	'black': (
+		400: #000000
+	),
+
+	'aqua': (
+		300: lighten(#62e8b5, 10%),
+		400: #62e8b5,
+		500: darken(#62e8b5, 10%),
+	),
+
+	'pink': (
+		300: lighten(#f588be, 10%),
+		400: #f588be,
+		500: darken(#f588be, 10%),
+	),
+
+	'coral': (
+		300: lighten(#ff8a8e, 10%),
+		400: #ff8a8e,
+		500: darken(#ff8a8e, 10%),
+	)
+);
+
+
+//----------------------
+// Fonts.
+//----------------------
+$serif-base: 'Georgia', 'Times New Roman', serif;
+$sans-base: 'system-ui', 'Arial', sans-serif;
+$mono-base: monospace;
+
+$fonts: (
+	'sans': unquote("'PLACEHOLDER',") $sans-base,
+	'serif': unquote("'PLACEHOLDER',") $serif-base,
+	'mono': unquote("'ATC Harris Code',") $mono-base
+);
+
+$weights: (
+	300,
+	400,
+	700
+);
+
+
+//----------------------
+// Container Sizes.
+//----------------------
+$containers: (
+	120,
+	320,
+	420,
+	520,
+	720,
+	820,
+	1000
+);
+
+$gutter: 30;
+
+
+//----------------------
+// Break Points.
+//----------------------
+$bp: (
+	md: 760,
+	lg: 980,
+	xl: 1280,
+	xxl: 1400
+);
+
+
+//----------------------
+// Transition time
+//----------------------
+$transition-times: (
+	short: 0.25s,
+	reg: 0.5s,
+	long: 1s
+);

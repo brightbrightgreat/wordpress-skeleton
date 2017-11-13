@@ -1,0 +1,34 @@
+{
+	"name": "REPLACE-CLIENTNICENAME",
+	"version": "1.0.0",
+	"author": "Bright Bright Great (http://brightbrightgreat.com)",
+	"homepage": "REPLACE-PROJECTURL",
+	"repository": {
+		"type": "git",
+		"url": "REPLACE-REPOURL"
+	},
+	"devDependencies": {
+		"autoprefixer": "*",
+		"cssnano": "*",
+		"grunt": "^1.0.0",
+		"grunt-blobfolio": "git+ssh://git@blobfolio.com:3417/grunt-blobfolio",
+		"grunt-contrib-clean": "^1.*",
+		"grunt-contrib-compress": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-sass": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-modernizr": "*",
+		"grunt-notify": "*",
+		"grunt-postcss": "*",
+		"grunt-sass": "*",
+		"grunt-sass-globbing": "*",
+		"grunt-svgmin": "*",
+		"load-grunt-config": "*",
+		"load-grunt-tasks": "*",
+		"postcss-fixes": "*"
+	},
+	"dependencies": {
+		"growl": "^1.10.3"
+	}
+}

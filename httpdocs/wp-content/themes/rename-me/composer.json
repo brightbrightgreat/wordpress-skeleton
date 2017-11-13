@@ -1,0 +1,15 @@
+{
+	"name": "bbg-common",
+	"require": {
+
+	},
+	"config": {
+		"vendor-dir": "lib/vendor",
+		"preferred-install": "dist"
+	},
+	"autoload": {
+		"psr-4": {
+			"bbg\\": "lib/bbg"
+		}
+	}
+}

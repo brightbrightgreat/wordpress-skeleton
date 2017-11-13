@@ -1,0 +1,90 @@
+//-----------------------------------------------------------
+// DISPLAY
+//-----------------------------------------------------------
+//----------------------
+// Display types.
+//----------------------
+.d\:f { display: flex; }
+.d\:b { display: block; }
+.d\:n { display: none; }
+.d\:i { display: inline; }
+
+// break points for display types.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d\:f { display: flex; }
+			&d\:b { display: block; }
+			&d\:n { display: none; }
+			&d\:i { display: inline; }
+		}
+	}
+}
+
+
+//----------------------
+// Z-index.
+//----------------------
+.d_z\:-1 { z-index: -1; }
+.d_z\:1 { z-index: 1; }
+
+
+//----------------------
+// Align-items
+//----------------------
+.d_ai\:fs { align-items: flex-start; }
+.d_ai\:c { align-items: center; }
+.d_ai\:fe { align-items: flex-end; }
+
+// break points for align-items.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d_ai\:fs { align-items: flex-start; }
+			&d_ai\:c { align-items: center; }
+			&d_ai\:fe { align-items: flex-end; }
+		}
+	}
+}
+
+
+//----------------------
+// Align-self
+//----------------------
+.d_as\:fs { align-self: flex-start; }
+.d_as\:c { align-self: center; }
+.d_as\:fe { align-self: flex-end; }
+
+// break points for align-self.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d_as\:fs { align-self: flex-start; }
+			&d_as\:c { align-self: center; }
+			&d_as\:fe { align-self: flex-end; }
+		}
+	}
+}
+
+
+//----------------------
+// Justify-content
+//----------------------
+.d_jc\:fs { justify-content: flex-start; }
+.d_jc\:sa { justify-content: space-around; }
+.d_jc\:sb { justify-content: space-between; }
+.d_jc\:c { justify-content: center; }
+.d_jc\:fe { justify-content: flex-end; }
+
+// break points for justify-content.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d_jc\:fs { justify-content: flex-start; }
+			&d_jc\:sa { justify-content: space-around; }
+			&d_jc\:sb { justify-content: space-between; }
+			&d_jc\:c { justify-content: center; }
+			&d_jc\:fe { justify-content: flex-end; }
+		}
+	}
+}

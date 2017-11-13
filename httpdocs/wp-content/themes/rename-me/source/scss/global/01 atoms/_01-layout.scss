@@ -1,0 +1,108 @@
+//-----------------------------------------------------------
+// LAYOUT
+//-----------------------------------------------------------
+//----------------------
+// Max widths.
+//----------------------
+@each $size in $containers {
+	.l_mw\:#{$size} { max-width: #{$size}px; }
+}
+
+// breakpoints for max width.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			@each $size in $containers {
+				&l_mw\:#{$size} { max-width: #{$size}px; }
+			}
+		}
+	}
+}
+
+//----------------------
+// Flex (Columns)
+//----------------------
+@each $size in $containers {
+	.l_f\:#{$size} { flex: 0 0 #{$size}px; }
+	.l_f\:#{$size}\[s\] { flex: 1 1 #{$size}px; }
+}
+
+// breakpoints for flex.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			@each $size in $containers {
+				&l_f\:#{$size} { flex: 0 0 #{$size}px; }
+				&l_f\:#{$size}\[s\] { flex: 1 1 #{$size}px; }
+			}
+		}
+	}
+}
+
+
+//----------------------
+// margins
+//----------------------
+.l_m\:#{$gutter/2}-x {
+	margin-top: #{$gutter/2}px;
+	margin-bottom: #{$gutter/2}px;
+}
+
+.l_m\:#{$gutter}-x {
+	margin-top: #{$gutter}px;
+	margin-bottom: #{$gutter}px;
+}
+
+.l_m\:#{$gutter*2}-x {
+	margin-top: #{$gutter*2}px;
+	margin-bottom: #{$gutter*2}px;
+}
+
+.l_m\:x-#{$gutter/2} {
+	margin-right: #{$gutter/2}px;
+	margin-left: #{$gutter/2}px;
+}
+
+.l_m\:x-#{$gutter} {
+	margin-right: #{$gutter}px;
+	margin-left: #{$gutter}px;
+}
+
+.l_m\:x-#{$gutter*2} {
+	margin-right: #{$gutter*2}px;
+	margin-left: #{$gutter*2}px;
+}
+
+
+//----------------------
+// padding
+//----------------------
+.l_p\:#{$gutter/2}-x {
+	padding-top: #{$gutter/2}px;
+	padding-bottom: #{$gutter/2}px;
+}
+
+.l_p\:#{$gutter}-x {
+	padding-top: #{$gutter}px;
+	padding-bottom: #{$gutter}px;
+}
+
+.l_p\:#{$gutter*2}-x {
+	padding-top: #{$gutter*2}px;
+	padding-bottom: #{$gutter*2}px;
+}
+
+.l_p\:x-#{$gutter/2} {
+	padding-right: #{$gutter/2}px;
+	padding-left: #{$gutter/2}px;
+}
+
+.l_p\:x-#{$gutter} {
+	padding-right: #{$gutter}px;
+	padding-left: #{$gutter}px;
+}
+
+.l_p\:x-#{$gutter*2} {
+	padding-right: #{$gutter*2}px;
+	padding-left: #{$gutter*2}px;
+}

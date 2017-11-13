@@ -1,0 +1,181 @@
+//-----------------------------------------------------------
+// TYPOGRAPHY
+//-----------------------------------------------------------
+//----------------------
+// Font families.
+//----------------------
+@each $keyword, $family in $fonts {
+	.t_f_#{$keyword} { font-family: $family; }
+}
+
+
+//----------------------
+// Text colors.
+//----------------------
+@each $name, $color in $colors {
+	@each $number, $shade in $color {
+		.t_c\:#{$name}-#{$number},
+		.t_h\:#{$name}-#{$number}:hover,
+		.u_hp:hover .t_h_#{$name}-#{$number} {
+			color: $shade;
+		}
+	}
+}
+
+
+//----------------------
+// Font weights.
+//----------------------
+@each $weight in $weights {
+	.t_w\:#{$weight}{
+		font-weight: $weight;
+	}
+}
+
+
+//----------------------
+// Headings.
+//----------------------
+h1,
+.t_h1 {
+
+}
+
+h2,
+.t_h2 {
+
+}
+
+h3,
+.t_h3 {
+
+}
+
+h4,
+.t_h4 {
+
+}
+
+h5,
+.t_h5 {
+
+}
+
+h6,
+.t_h6 {
+
+}
+
+
+//----------------------
+// Text transform.
+//----------------------
+.t_t\u { text-transform: uppercase; }
+.t_t\:n { text-transform: none; }
+
+
+//----------------------
+// Text align.
+//----------------------
+.t_a\:l { text-align: left; }
+.t_a\:r { text-align: right; }
+.t_a\:c { text-align: center; }
+
+
+//----------------------
+// Common typography styles.
+//----------------------
+.t_u {
+	border-bottom: 2px solid currentColor;
+}
+
+.t_u-h {
+	position: relative;
+	display: inline-block;
+
+	&:after {
+		position: absolute;
+		right: 0;
+		bottom: -0.1em;
+		left: 0;
+		display: block;
+		height: 2px;
+		background: currentColor;
+		content: '';
+		transform: scalex(0);
+		transform-origin: left center;
+		transition: transform map-get($transition-times, reg);
+	}
+
+	&:hover:after { transform: scaleX(1); }
+}
+
+
+//----------------------
+// this class
+// should be applied to
+// any content coming from
+// a wysiwyg
+//----------------------
+.t_wysiwyg {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		&:not(:first-child) { margin-top: 1em; }
+		&:not(:last-child) { margin-bottom: 1em; }
+	}
+
+	hr {
+
+	}
+
+	mark {
+		display: inline-block;
+		padding: 0.2em 0.4em;
+		background: rgba(yellow, 0.25);
+		box-shadow: inset 0 -2px yellow;
+	}
+
+	blockquote {
+
+	}
+
+	li {
+		position: relative;
+		margin: 0.5em 30px;
+
+		&:before {
+			position: absolute;
+			left: -30px;
+		}
+	}
+
+	ul li:before {
+		display: block;
+		top: 0.6em;
+		width: 5px;
+		height: 5px;
+		background: currentColor;
+		border-radius: 50%;
+		content: '';
+	}
+
+	ol { counter-reset: olCounter; }
+
+	ol li { counter-increment: olCounter; }
+
+	ol li:before {
+		font-style: normal;
+		content: counter(olCounter) ".";
+	}
+
+	.has-img,
+	.has-embed,
+	blockquote,
+	video {
+		margin: 2em -30px;
+	}
+}
