@@ -61,22 +61,4 @@ Container::make( 'theme_options', 'Theme Settings' )
 	Field::make('text', 'facebook_app', 'Facebook App ID')
 	->set_required(true),
 
-))
-
-// Newsletter.
-->add_tab('Newsletter', array(
-
-	// Thank you message.
-	Field::make('textarea', 'thank_you', 'Thank You Message')
-	->set_required(true)
-	->set_help_text('The text shown when the sign up form has been successfully submitted.'),
-
-	// Mailchimp API Key.
-	Field::make('text', 'mailchimp_api_key', 'Mailchimp API Key')
-	->set_required(true),
-
-	// Mailchimp List ID.
-	Field::make('text', 'mailchimp_list_id', 'Mailchimp List ID')
-	->set_required(true),
-
 ));
