@@ -9,7 +9,7 @@
  */
 
 // Asset Version. Update this date when you make changes to the live site.
-define('BBG_THEME_ASSET_VERSION', (BBG_TESTMODE ? microtime() : '20171010'));
+define('BBG_THEME_ASSET_VERSION', (BBG_TESTMODE ? time() : '20171010'));
 
 // Theme URL.
 define('BBG_THEME_URL', get_bloginfo('template_url') . '/');
