@@ -19,21 +19,35 @@
 	}
 }
 
+
 //----------------------
 // Flex (Columns)
 //----------------------
-@each $size in $containers {
-	.l_f\:#{$size} { flex: 0 0 #{$size}px; }
-	.l_f\:#{$size}\[s\] { flex: 1 1 #{$size}px; }
+.l_f\: {
+	@each $size in $containers {
+		&#{$size} { flex: 0 0 #{$size}px; }
+		&#{$size}\[s\] { flex: 1 1 #{$size}px; }
+	}
+
+	@each $keyword, $size in $cols {
+		&#{$keyword} { flex: 0 0 calc(#{$size}); }
+		&#{$keyword}\[s\] { flex: 1 1 calc(#{$size}); }
+	}
 }
 
 // breakpoints for flex.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
+		.\{#{$keyword}\}l_f\: {
+
 			@each $size in $containers {
-				&l_f\:#{$size} { flex: 0 0 #{$size}px; }
-				&l_f\:#{$size}\[s\] { flex: 1 1 #{$size}px; }
+				&#{$size} { flex: 0 0 #{$size}px; }
+				&#{$size}\[s\] { flex: 1 1 #{$size}px; }
+			}
+
+			@each $k, $v in $cols {
+				&#{$k} { flex: 0 0 calc(#{$v}); }
+				&#{$k}\[s\] { flex: 1 1 calc(#{$v}); }
 			}
 		}
 	}
@@ -41,68 +55,100 @@
 
 
 //----------------------
-// margins
+// Margins
 //----------------------
-.l_m\:#{$gutter/2}-x {
-	margin-top: #{$gutter/2}px;
-	margin-bottom: #{$gutter/2}px;
+// All.
+.l_m\: {
+	&auto { margin: auto; }
+	&0 { margin: 0; }
 }
 
-.l_m\:#{$gutter}-x {
-	margin-top: #{$gutter}px;
-	margin-bottom: #{$gutter}px;
+// Top/Bottom.
+.l_m\: {
+	&1em-x { margin-top: 1em; margin-bottom: 1em; }
 }
 
-.l_m\:#{$gutter*2}-x {
-	margin-top: #{$gutter*2}px;
-	margin-bottom: #{$gutter*2}px;
+// Right/Left.
+.l_m\:x- {
+	&auto { margin-right: auto; margin-left: auto; }
 }
 
-.l_m\:x-#{$gutter/2} {
-	margin-right: #{$gutter/2}px;
-	margin-left: #{$gutter/2}px;
+.\{lg\}l_m\:x- {
+	@include mq(map-get($bp, lg)) {
+		&auto { margin-right: auto; margin-left: auto; }
+	}
 }
 
-.l_m\:x-#{$gutter} {
-	margin-right: #{$gutter}px;
-	margin-left: #{$gutter}px;
+// Top.
+.l_m-t\:{
+
 }
 
-.l_m\:x-#{$gutter*2} {
-	margin-right: #{$gutter*2}px;
-	margin-left: #{$gutter*2}px;
+// Right.
+.l_m-r\:{
+
+}
+
+// Bottom.
+.l_m-b\: {
+
+}
+
+// Left.
+.l_m-l\: {
+
 }
 
 
 //----------------------
 // padding
 //----------------------
-.l_p\:#{$gutter/2}-x {
-	padding-top: #{$gutter/2}px;
-	padding-bottom: #{$gutter/2}px;
+// All.
+.l_p\: {
+
 }
 
-.l_p\:#{$gutter}-x {
-	padding-top: #{$gutter}px;
-	padding-bottom: #{$gutter}px;
+// Top/Bottom.
+.l_p\: {
+	&1em-x { padding-top: 1em; padding-bottom: 1em; }
 }
 
-.l_p\:#{$gutter*2}-x {
-	padding-top: #{$gutter*2}px;
-	padding-bottom: #{$gutter*2}px;
+// Right/Left.
+.l_p\:x- {
+
 }
 
-.l_p\:x-#{$gutter/2} {
-	padding-right: #{$gutter/2}px;
-	padding-left: #{$gutter/2}px;
+// Top.
+.l_p-t\: {
+
 }
 
-.l_p\:x-#{$gutter} {
-	padding-right: #{$gutter}px;
-	padding-left: #{$gutter}px;
+// Bottom.
+.l_p-b\: {
+
 }
 
-.l_p\:x-#{$gutter*2} {
-	padding-right: #{$gutter*2}px;
-	padding-left: #{$gutter*2}px;
+// Right.
+.l_p-r\: {
+
 }
+
+// Left.
+.l_p-l\: {
+
+}
+
+
+//----------------------
+// Icons
+//----------------------
+.l_i\: {
+	&24x24 { width: 24px; height: 24px; }
+	&32x32 { width: 32px; height: 32px; }
+}
+
+
+//----------------------
+// Overflow
+//----------------------
+.l_of\:y-s { overflow-y: scroll; }

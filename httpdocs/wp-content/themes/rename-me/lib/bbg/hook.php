@@ -22,10 +22,16 @@ class hook extends \bbg\wp\common\base\hook {
 			'styles'=>null,
 			'scripts'=>null,
 		),
+		'after_setup_theme'=>array(
+			'add_images'=>null,
+		),
 	);
 
 	// Filters: hook=>[callbacks].
 	const FILTERS = array(
+		'bbg_common_js_env'=>array(
+			'js_env'=>null,
+		),
 	);
 
 	// -----------------------------------------------------------------
@@ -45,35 +51,12 @@ class hook extends \bbg\wp\common\base\hook {
 
 		// Core CSS.
 		wp_register_style(
-			'bbg-core',
+			'bbg-core-css',
 			"{$css_url}core.css",
 			array(),
 			BBG_THEME_ASSET_VERSION
 		);
-		wp_enqueue_style('bbg-core');
-
-		// Some styles are page-specific. They'll be enqueued
-		// automatically so long as {type}-{slug}.css exists in the
-		// single/ folder.
-		global $template;
-		$file_slug = basename($template);
-		$file_slug = preg_replace('/\.php$/i', '', $file_slug);
-		$file_slug .= '.css';
-
-		if (file_exists($css_path . $file_slug)) {
-
-			$clean_slug = md5($file_slug);
-
-			wp_register_style(
-				$clean_slug,
-				$css_url . $file_slug,
-				array(),
-				BBG_THEME_ASSET_VERSION
-			);
-
-			wp_enqueue_style($clean_slug);
-
-		} // endif file exists
+		wp_enqueue_style('bbg-core-css');
 	}
 
 	/**
@@ -87,45 +70,42 @@ class hook extends \bbg\wp\common\base\hook {
 		$js_url = BBG_THEME_URL . 'dist/js/';
 		$js_path = BBG_THEME_PATH . 'dist/js/';
 
-		// Core JS.
-		wp_register_script(
-			'bbg-core',
-			"{$js_url}core.min.js",
-			array(),
-			BBG_THEME_ASSET_VERSION
-		);
-		wp_enqueue_script('bbg-core');
-
 		// Libs JS.
 		wp_register_script(
-			'bbg-libs',
+			'bbg-libs-js',
 			"{$js_url}libs.min.js",
 			array(),
-			BBG_THEME_ASSET_VERSION
+			BBG_THEME_ASSET_VERSION,
+			true
 		);
-		wp_enqueue_script('bbg-core');
 
-		// Some styles are page-specific. They'll be enqueued
-		// automatically so long as {type}-{slug}.css exists in the
-		// single/ folder.
-		global $template;
-		$file_slug = basename($template);
-		$file_slug = preg_replace('/\.php$/i', '', $file_slug);
-		$file_slug .= '.min.js';
+		// Core JS.
+		wp_register_script(
+			'bbg-core-js',
+			"{$js_url}core.min.js",
+			array('bbg-libs-js'),
+			BBG_THEME_ASSET_VERSION,
+			true
+		);
+		wp_enqueue_script('bbg-core-js');
+	}
 
-		if (file_exists($js_path . $file_slug)) {
+	/**
+	 * Add Image Sizes
+	 *
+	 * @return void Nothing.
+	 */
+	public static function add_images() {
+		// Add your image sizes in this function.
+	}
 
-			$clean_slug = md5($file_slug);
-
-			wp_register_script(
-				$clean_slug,
-				$js_url . $file_slug,
-				array(),
-				BBG_THEME_ASSET_VERSION
-			);
-
-			wp_enqueue_script($clean_slug);
-
-		} // endif file exists
+	/**
+	 * Add anything you need to add to js_env
+	 *
+	 * @param array $data The current set of js_env data.
+	 * @return array $data The updated js_env data.
+	 */
+	public static function js_env($data) {
+		return $data;
 	}
 }

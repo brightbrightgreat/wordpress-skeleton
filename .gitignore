@@ -1,16 +1,18 @@
 # Folders
 node_modules
-dev
 .sass-cache
+dev
 
 # Files
-secrets.json
 wp-config.php
+secrets.json
 
 # Globs
+**/dist/js/*.min.js
+**/source/css/*.css
+**/dist/css/*.css
 *.DS_Store
 *.sketch
-source/*.css
 *.map
 *.psd
 *.ai

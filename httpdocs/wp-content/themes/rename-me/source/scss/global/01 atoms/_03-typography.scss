@@ -70,7 +70,7 @@ h6,
 //----------------------
 // Text transform.
 //----------------------
-.t_t\u { text-transform: uppercase; }
+.t_t\:u { text-transform: uppercase; }
 .t_t\:n { text-transform: none; }
 
 
@@ -81,33 +81,25 @@ h6,
 .t_a\:r { text-align: right; }
 .t_a\:c { text-align: center; }
 
+//----------------------
+// Font style.
+//----------------------
+.t_s\:i { font-style: italic; }
+.t_s\:n { font-style: normal; }
+
+
+//----------------------
+// Line heights.
+//----------------------
+.t_lh\:1\.5 { line-height: 1.5; }
+.t_lh\:2 { line-height: 2; }
+
 
 //----------------------
 // Common typography styles.
 //----------------------
 .t_u {
 	border-bottom: 2px solid currentColor;
-}
-
-.t_u-h {
-	position: relative;
-	display: inline-block;
-
-	&:after {
-		position: absolute;
-		right: 0;
-		bottom: -0.1em;
-		left: 0;
-		display: block;
-		height: 2px;
-		background: currentColor;
-		content: '';
-		transform: scalex(0);
-		transform-origin: left center;
-		transition: transform map-get($transition-times, reg);
-	}
-
-	&:hover:after { transform: scaleX(1); }
 }
 
 
@@ -140,7 +132,7 @@ h6,
 	}
 
 	blockquote {
-
+		margin: 1em 0;
 	}
 
 	li {
@@ -172,10 +164,44 @@ h6,
 		content: counter(olCounter) ".";
 	}
 
-	.has-img,
-	.has-embed,
-	blockquote,
-	video {
-		margin: 2em -30px;
+	table {
+		font-weight: 400;
+		table-layout: fixed;
+		margin: 1em 0;
+		width: 100%;
+		border-top: 0;
+	}
+
+	th,
+	tfoot td,
+	thead td {
+		font-weight: 400;
+	}
+
+	tbody tr:nth-child(even) { background: rgba(black, 0.25); }
+
+	th,
+	td { padding: 0.5em 1em; }
+
+	thead th {
+		background: rgba(black, 0.5);
+
+		&:not(:last-child) {
+			border-right: 1px solid black;
+		}
+	}
+
+	td:not(:last-child),
+	tbody th:not(:last-child) {
+		border-right: 1px solid black;
+	}
+
+	dt {
+		&:after { content: ':'; }
+	}
+
+	dd {
+		font-weight: 400;
+		margin-bottom: 1em;
 	}
 }

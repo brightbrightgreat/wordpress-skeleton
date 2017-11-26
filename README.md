@@ -20,11 +20,13 @@
 
 4. Do a search over the whole project for `#REPLACE-REPOURL` and replace it with the repo name in the following format: `https://github.com/brightbrightgreat/avondaletypeco`
 
+4. Do a search over the whole project for `#REPLACE-ASANAURL` and replace it with the url of this project's Asana.
+
 5. Run `npm install` in the theme directory to install grunt.
 
-6. Replace this README.md with the SAMPLE-README.md in this directory.
-
 7. Run `grunt watch` in the theme directory while working to run grunt.
+
+6. Replace this README.md with the SAMPLE-README.md in this directory. Fill out the information about the project in that file.
 
 
 ## Help

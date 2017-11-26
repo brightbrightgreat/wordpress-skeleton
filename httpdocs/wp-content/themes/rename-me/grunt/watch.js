@@ -29,7 +29,7 @@ module.exports = {
 	},
 
 	svgs: {
-		files: ['<%= paths.img.svg %>/*.svg'],
+		files: ['<%= paths.svg.source %>/*.svg'],
 		tasks: ['svgs', 'notify:svg'],
 		options : { spawn: false }
 	}

@@ -72,7 +72,14 @@ $containers: (
 	1000
 );
 
-$gutter: 30;
+$cols: (
+	quarter: 25%,
+	third: 33.33%,
+	half: 50%,
+	two-thirds: 66.66%,
+	three-quarters: 75%,
+	full: 100%
+);
 
 
 //----------------------

@@ -1,11 +1,11 @@
 {
-	"name": "REPLACE-CLIENTNICENAME",
+	"name": "#REPLACE-CLIENTSLUGNAME",
 	"version": "1.0.0",
 	"author": "Bright Bright Great (http://brightbrightgreat.com)",
-	"homepage": "REPLACE-PROJECTURL",
+	"homepage": "#REPLACE-PROJECTURL",
 	"repository": {
 		"type": "git",
-		"url": "REPLACE-REPOURL"
+		"url": "#REPLACE-REPOURL"
 	},
 	"devDependencies": {
 		"autoprefixer": "*",

@@ -6,6 +6,7 @@
 .alignright,
 .alignleft,
 .aligncenter {
+	margin-bottom: 1em;
 	&, & img { width: auto; max-width: 100%; }
 }
 
