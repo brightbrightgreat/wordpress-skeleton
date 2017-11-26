@@ -42,7 +42,7 @@ class fields extends \bbg\wp\common\base\hook {
 	 *
 	 * @param string $name The name of the field group to clone.
 	 * @param string $prefix An optional prefix to prevent field collisions.
-	 * @return void Nothing.
+	 * @return array $fields An array of the field definitions.
 	 */
 	public static function clone_fields(string $name, string $prefix='') {
 		$fields = array();
