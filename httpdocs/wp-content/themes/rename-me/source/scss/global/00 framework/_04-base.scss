@@ -8,7 +8,6 @@ body {
 }
 
 a {
-	border-bottom: 2px solid transparent;
 	text-decoration: none;
 	color: blue;
 	transition: all map-get($transition-times, reg);
@@ -37,4 +36,21 @@ button {
 	padding: 0;
 	background: transparent;
 	transition: all map-get($transition-times, reg);
+}
+
+.frame {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+}
+
+header,
+main,
+footer {
+	width: 100%;
+}
+
+main {
+	flex: 1 0 auto;
 }

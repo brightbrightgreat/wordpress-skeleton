@@ -22,10 +22,16 @@ class hook extends \bbg\wp\common\base\hook {
 			'styles'=>null,
 			'scripts'=>null,
 		),
+		'after_setup_theme'=>array(
+			'add_images'=>null,
+		)
 	);
 
 	// Filters: hook=>[callbacks].
 	const FILTERS = array(
+		'bbg_common_js_env'=>array(
+			'js_env'=>null
+		)
 	);
 
 	// -----------------------------------------------------------------
@@ -82,5 +88,13 @@ class hook extends \bbg\wp\common\base\hook {
 			true
 		);
 		wp_enqueue_script('bbg-core-js');
+	}
+
+	public static function add_images() {
+		// Add your image sizes in this function.
+	}
+
+	public static function js_env($data) {
+		return $data;
 	}
 }

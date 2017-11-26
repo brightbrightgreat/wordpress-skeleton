@@ -9,11 +9,12 @@ module.exports = {
 
 	files: {
 		expand: true,
-		cwd: '<%= paths.img.svg %>',
+		cwd: '<%= paths.svg.source %>',
 		src: ['*.svg'],
-		dest: 'svgs',
 		ext: '.svg',
-		extDot: 'first'
+		dest: '<%= paths.svg.dist %>',
+		extDot: 'first',
+		flatten: true
 	}
 
 };

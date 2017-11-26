@@ -71,22 +71,29 @@ pre {
 	font-style: normal;
   line-height: inherit;
   &:first-child { margin-top: 0; }
-	&:last-child { margin-top: 0; }
+	&:last-child { margin-bottom: 0; }
+}
+
+ul,
+ol {
+	padding: 0;
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-left: 1em;
+	padding: 0;
+  margin-left: 0;
 }
 
 dt {
   font-weight: 700;
 }
 
-dd,
-li {
+dd
+//li
+{
   &:not(:last-child) { margin-bottom: .5em; }
 }
 

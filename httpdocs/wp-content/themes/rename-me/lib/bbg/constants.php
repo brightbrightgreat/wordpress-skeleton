@@ -28,16 +28,14 @@ define('BBG_THEME_PATH', trailingslashit(dirname(dirname(dirname(__FILE__)))));
 // --------------------------------------------------------------------- end paths
 
 
-
 // ---------------------------------------------------------------------
 // Posts
 // ---------------------------------------------------------------------
 
 // Any post that is special enough to get a disconnected call somewhere
-// should have its ID recorded here. Do not ever get_permalink(5). Haha.
+// should have its ID recorded here. Do not ever get_permalink(5).
 
 // --------------------------------------------------------------------- end posts
-
 
 
 // ---------------------------------------------------------------------
@@ -46,14 +44,13 @@ define('BBG_THEME_PATH', trailingslashit(dirname(dirname(dirname(__FILE__)))));
 // --------------------------------------------------------------------- end APIs
 
 
-
 // ---------------------------------------------------------------------
 // Misc
 // ---------------------------------------------------------------------
 
 // Asset version for CSS/JS assets. Be sure to update when changes are
 // made!
-define('BBG_THEME_ASSET_VERSION', (defined('BBG_TESTMODE') && BBG_TESTMODE ? time() : '20171010'));
+define('BBG_THEME_ASSET_VERSION', (defined('BBG_TESTMODE') && BBG_TESTMODE ? microtime(true) : '20171010'));
 
 // Social Networks.
 define('BBG_SOCIAL_NETWORKS', array(
