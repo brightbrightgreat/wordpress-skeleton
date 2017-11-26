@@ -17,7 +17,7 @@ Container::make( 'post_meta', 'hero', 'Hero' )
 // Display location.
 ->where( 'post_type', 'IN', array('page', 'post') )
 
-// Page context
+// Page context.
 ->set_context('carbon_fields_after_title')
 
 // Set up fields.

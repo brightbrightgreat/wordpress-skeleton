@@ -24,14 +24,14 @@ class hook extends \bbg\wp\common\base\hook {
 		),
 		'after_setup_theme'=>array(
 			'add_images'=>null,
-		)
+		),
 	);
 
 	// Filters: hook=>[callbacks].
 	const FILTERS = array(
 		'bbg_common_js_env'=>array(
-			'js_env'=>null
-		)
+			'js_env'=>null,
+		),
 	);
 
 	// -----------------------------------------------------------------
@@ -90,10 +90,21 @@ class hook extends \bbg\wp\common\base\hook {
 		wp_enqueue_script('bbg-core-js');
 	}
 
+	/**
+	 * Add Image Sizes
+	 *
+	 * @return void Nothing.
+	 */
 	public static function add_images() {
 		// Add your image sizes in this function.
 	}
 
+	/**
+	 * Add anything you need to add to js_env
+	 *
+	 * @param array $data The current set of js_env data.
+	 * @return array $data The updated js_env data.
+	 */
 	public static function js_env($data) {
 		return $data;
 	}
