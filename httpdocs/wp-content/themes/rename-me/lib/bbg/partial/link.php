@@ -39,8 +39,7 @@ class link extends \bbg\wp\common\base\partial {
 		ob_start();
 		$link = \bbg\wp\common\utility::get_link($args); ?>
 
-		<a id="<?=$id?>" href="<?=$link['url']?>" class="<?=implode($link['classes'], ' ')?>" target="<?=$link['target']?>" <?=($link['download'] ? 'download' : '')?>
-			<?=($link['video'] ? 'v-on:click.prevent="modal = \'' . $link['modalID']  . '\'"' : '')?>>
+		<a id="<?=$id?>" href="<?=$link['url']?>" class="<?=implode($link['classes'], ' ')?>" target="<?=$link['target']?>" <?=($link['download'] ? 'download' : '')?>>
 			<?=$link['text']?>
 		</a>
 
