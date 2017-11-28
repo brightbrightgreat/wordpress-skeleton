@@ -74,7 +74,7 @@ class hook extends \bbg\wp\common\base\hook {
 		wp_register_script(
 			'bbg-libs-js',
 			"{$js_url}libs.min.js",
-			array(),
+			array('bbg-common-vue-deps-js'),
 			BBG_THEME_ASSET_VERSION,
 			true
 		);

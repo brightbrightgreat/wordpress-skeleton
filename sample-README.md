@@ -17,7 +17,7 @@ BBG Shared Hosting
 [#REPLACE-PROJECTSTAGING](#REPLACE-PROJECTSTAGING)
 
 **Asana**
-[view](https://asana.com/)
+[view](#REPLACE-ASANAURL)
 
 
 ## Roles
