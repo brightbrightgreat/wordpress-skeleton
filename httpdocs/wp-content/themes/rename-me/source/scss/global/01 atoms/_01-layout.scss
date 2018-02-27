@@ -52,6 +52,7 @@
 				&#{$keyword}\[s\] { flex: 1 1 #{$size}; width: #{$size}; }
 				&#{$keyword}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px); }
 				&#{$keyword}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px); }
+			}
 		}
 	}
 }
