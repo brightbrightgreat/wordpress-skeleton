@@ -30,7 +30,7 @@ use bbg\bootstrap as b;
 
 	<body <?=body_class()?>>
 
-		<div id="vue-app" class="frame">
+		<div id="vue-app" class="frame" v-cloak>
 			<!-- ==============================================
 				HEADER
 			=============================================== -->

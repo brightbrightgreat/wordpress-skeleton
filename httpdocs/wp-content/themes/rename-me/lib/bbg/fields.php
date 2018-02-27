@@ -113,13 +113,6 @@ class fields extends \bbg\wp\common\base\hook {
 				);
 				break;
 
-			case 'text_color':
-				$fields = array(
-					Field::make('radio', $prefix . 'text_color', 'Text Color')
-					->add_options(BBG_TEXT_COLORS),
-				);
-				break;
-
 			case 'text':
 				$fields = array_merge(
 					array(

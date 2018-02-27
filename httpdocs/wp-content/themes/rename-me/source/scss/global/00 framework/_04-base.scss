@@ -4,14 +4,14 @@
 body {
 	background: white;
 	color: black;
-	font-family: $sans-base;
+	line-height: 1.2;
 }
 
 a {
 	text-decoration: none;
-	color: blue;
+	color: inherit;
+	cursor: pointer;
 	transition: all map-get($transition-times, reg);
-	&:hover { color: red; }
 }
 
 input,
@@ -20,21 +20,36 @@ select,
 label {
 	display: block;
 	margin: 0;
+	padding: 0;
 	width: 100%;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
 }
 
 input,
 textarea {
+	transition: all map-get($transition-times, short);
+
 	@include placeholderStyles() {
-		color: inherit;
-		opacity: 1;
+		opacity: 0.5;
 	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	.error & { border-color: red; }
 }
 
 button {
 	margin: 0;
 	padding: 0;
 	background: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
 	transition: all map-get($transition-times, reg);
 }
 
@@ -43,6 +58,11 @@ button {
 	flex-direction: column;
 	width: 100%;
 	min-height: 100vh;
+
+	&.has\:modal {
+		overflow: hidden;
+		max-height: 100vh;
+	}
 }
 
 header,

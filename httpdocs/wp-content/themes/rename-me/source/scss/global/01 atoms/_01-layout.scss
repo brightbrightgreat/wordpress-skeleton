@@ -1,6 +1,70 @@
 //-----------------------------------------------------------
 // LAYOUT
 //-----------------------------------------------------------
+//-----------------------------------------------------------
+// LAYOUT
+//-----------------------------------------------------------
+//----------------------
+// Flex (Columns px)
+//----------------------
+.l_f\: {
+	@each $size in $containers {
+		&#{$size} { flex: 0 0 #{$size}px; max-width: #{$size}px; }
+		&#{$size}\[s\] { flex: 1 1 #{$size}px; width: #{$size}px; }
+		&#{$size}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
+		&#{$size}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+	}
+}
+
+// breakpoints for flex.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\}l_f\: {
+			@each $size in $containers {
+				&#{$size} { flex: 0 0 #{$size}px; max-width: #{$size}px; }
+				&#{$size}\[s\] { flex: 1 1 #{$size}px; width: #{$size}px; }
+				&#{$size}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
+				&#{$size}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+			}
+		}
+	}
+}
+
+
+//----------------------
+// Flex (Columns %)
+//----------------------
+.l_f\: {
+	@each $keyword, $size in $cols {
+		&#{$keyword} { flex: 0 0 #{$size}; max-width: #{$size}; }
+		&#{$keyword}\[s\] { flex: 1 1 #{$size}; width: #{$size}; }
+		&#{$keyword}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
+		&#{$keyword}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+	}
+}
+
+// breakpoints for flex.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\}l_f\: {
+			@each $keyword, $size in $cols {
+				&#{$keyword} { flex: 0 0 #{$size}; max-width: #{$size}; }
+				&#{$keyword}\[s\] { flex: 1 1 #{$size}; width: #{$size}; }
+				&#{$keyword}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px); }
+				&#{$keyword}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px); }
+		}
+	}
+}
+
+
+//----------------------
+// Widths.
+//----------------------
+.l_w\: {
+
+}
+
+
 //----------------------
 // Max widths.
 //----------------------
@@ -21,36 +85,10 @@
 
 
 //----------------------
-// Flex (Columns)
+// Heights.
 //----------------------
-.l_f\: {
-	@each $size in $containers {
-		&#{$size} { flex: 0 0 #{$size}px; }
-		&#{$size}\[s\] { flex: 1 1 #{$size}px; }
-	}
+.l_h\: {
 
-	@each $keyword, $size in $cols {
-		&#{$keyword} { flex: 0 0 calc(#{$size}); }
-		&#{$keyword}\[s\] { flex: 1 1 calc(#{$size}); }
-	}
-}
-
-// breakpoints for flex.
-@each $keyword, $size in $bp {
-	@include mq($size) {
-		.\{#{$keyword}\}l_f\: {
-
-			@each $size in $containers {
-				&#{$size} { flex: 0 0 #{$size}px; }
-				&#{$size}\[s\] { flex: 1 1 #{$size}px; }
-			}
-
-			@each $k, $v in $cols {
-				&#{$k} { flex: 0 0 calc(#{$v}); }
-				&#{$k}\[s\] { flex: 1 1 calc(#{$v}); }
-			}
-		}
-	}
 }
 
 
@@ -140,15 +178,7 @@
 
 
 //----------------------
-// Icons
-//----------------------
-.l_i\: {
-	&24x24 { width: 24px; height: 24px; }
-	&32x32 { width: 32px; height: 32px; }
-}
-
-
-//----------------------
 // Overflow
 //----------------------
-.l_of\:y-s { overflow-y: scroll; }
+.l_o\:a { overflow: auto; }
+.l_o\:h { overflow: hidden; }
