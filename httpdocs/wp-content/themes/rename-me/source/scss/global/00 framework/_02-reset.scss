@@ -62,13 +62,13 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
 blockquote,
 figure,
 address,
 pre {
 	margin: 1em 0;
-	font-style: normal;
+	font-style: inherit;
   line-height: inherit;
   &:first-child { margin-top: 0; }
 	&:last-child { margin-bottom: 0; }
@@ -320,3 +320,12 @@ iframe {
 
 html,
 body { height: 100%; }
+
+.screen-reader {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}

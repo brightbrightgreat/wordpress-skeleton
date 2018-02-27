@@ -14,10 +14,7 @@ class text extends \bbg\wp\common\base\partial {
 	const TEMPLATE = array(
 		'headline'=>'',
 		'text'=>'',
-		'buttons'=>array(),
-
 		'text_color'=>'black-400',
-
 		'section_classes'=>'m:hero',
 	);
 
@@ -35,13 +32,6 @@ class text extends \bbg\wp\common\base\partial {
 		<div class="l_mw:820 <?=$args['text_color']?>">
 			<h2 v-if="partial.<?=$id?>.headline">{{ partial.<?=$id?>.headline }}</h1>
 			<div v-if="partial.<?=$id?>.text" class="t_wysiwyg" v-html="partial.<?=$id?>.text"></div>
-
-			<?php
-			buttons::print(array(
-				'buttons'=>$args['buttons'],
-				'color'=>$args['text_color'],
-			));
-			?>
 		</div>
 
 		<?php
