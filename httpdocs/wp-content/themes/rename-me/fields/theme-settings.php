@@ -26,4 +26,4 @@ foreach (BBG_SOCIAL_NETWORKS as $k=>$v) {
 Container::make( 'theme_options', 'Theme Settings' )
 
 // Social.
-->add_tab('Social', $social)
+->add_tab('Social', $social);

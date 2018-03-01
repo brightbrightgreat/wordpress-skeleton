@@ -14,7 +14,7 @@
 				FOOTER
 			=============================================== -->
 			<footer class="footer">
-				<a href="https://brightbrightgreat.com" target="_blank" alt="Designed By Bright Bright Great">
+				<a href="https://brightbrightgreat.com" target="_blank" alt="Web Design and Brand Strategy">
 					<?=\bbg\wp\common\utility::get_icon('bbg')?>
 				</a>
 			</footer>
