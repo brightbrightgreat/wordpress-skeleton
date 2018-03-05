@@ -6,7 +6,7 @@
  * @author  Bright Bright Great <sayhello@brightbrightgreat.com>
  */
 
-use bbg\bootstrap as b;
+use bbg\wp\common\utility as u;
 ?><!DOCTYPE html>
 <html>
 	<head>
@@ -35,7 +35,7 @@ use bbg\bootstrap as b;
 				HEADER
 			=============================================== -->
 			<header class="h">
-				
+
 			</header>
 
 			<main>
