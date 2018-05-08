@@ -69,6 +69,7 @@ address,
 pre {
 	margin: 1em 0;
 	font-style: inherit;
+	font-weight: inherit;
   line-height: inherit;
   &:first-child { margin-top: 0; }
 	&:last-child { margin-bottom: 0; }
@@ -151,7 +152,7 @@ img {
 }
 
 svg:not(:root) {
-  overflow: hidden;
+  overflow: visible;
 }
 
 a,
@@ -192,6 +193,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+	color: inherit;
 }
 
 button,
