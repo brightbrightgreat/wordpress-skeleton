@@ -34,7 +34,7 @@ use bbg\wp\common\utility as u;
 			<!-- ==============================================
 				HEADER
 			=============================================== -->
-			<header class="h">
+			<header class="s:header">
 
 			</header>
 

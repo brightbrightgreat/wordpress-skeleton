@@ -50,7 +50,7 @@ define('BBG_THEME_PATH', trailingslashit(dirname(dirname(dirname(__FILE__)))));
 
 // Asset version for CSS/JS assets. Be sure to update when changes are
 // made!
-define('BBG_THEME_ASSET_VERSION', (defined('BBG_TESTMODE') && BBG_TESTMODE ? microtime(true) : '20171010'));
+define('BBG_THEME_ASSET_VERSION', (defined('BBG_TESTMODE') && BBG_TESTMODE ? microtime(true) : '20180507'));
 
 // Social Networks.
 define('BBG_SOCIAL_NETWORKS', array(

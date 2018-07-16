@@ -13,8 +13,8 @@
 			<!-- ==============================================
 				FOOTER
 			=============================================== -->
-			<footer class="footer">
-				<a href="https://brightbrightgreat.com" target="_blank" alt="Web Design and Brand Strategy">
+			<footer class="s:footer">
+				<a href="https://brightbrightgreat.com" target="_blank" alt="Web Design, Web Development, Brand Strategy, Digital Marketing">
 					<?=\bbg\wp\common\utility::get_icon('bbg')?>
 				</a>
 			</footer>

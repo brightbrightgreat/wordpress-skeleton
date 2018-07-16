@@ -88,3 +88,32 @@
 		}
 	}
 }
+
+
+//----------------------
+// Flex-wrap.
+//----------------------
+.d_fw\:w { flex-wrap: wrap; }
+.d_fw\:wr { flex-wrap: wrap-reverse; }
+
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d_fw\:n { flex-wrap: nowrap;; }
+		}
+	}
+}
+
+
+//----------------------
+// Flex-direction
+//----------------------
+.d_fd\:c { flex-direction: column; }
+// break points for justify-content.
+@each $keyword, $size in $bp {
+	@include mq($size) {
+		.\{#{$keyword}\} {
+			&d_fd\:c { flex-direction: column; }
+		}
+	}
+}

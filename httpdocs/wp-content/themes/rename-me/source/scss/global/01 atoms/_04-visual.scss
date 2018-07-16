@@ -8,7 +8,7 @@
 	@each $number, $shade in $color {
 		.v_bg\:#{$name}-#{$number},
 		.v_hbg\:#{$name}-#{$number}:hover,
-		.u_hp:hover .v_hbg_#{$name}-#{$number} {
+		.u_hp:hover .v_hbg\:#{$name}-#{$number} {
 			background-color: $shade;
 		}
 	}
@@ -30,7 +30,7 @@
 	@each $number, $shade in $color {
 		.v_border\:#{$name}-#{$number},
 		.v_hborder\:#{$name}-#{$number}:hover,
-		.u_hp:hover .v_hborder_#{$name}-#{$number} {
+		.u_hp:hover .v_hborder\:#{$name}-#{$number} {
 			border-color: $shade;
 		}
 	}

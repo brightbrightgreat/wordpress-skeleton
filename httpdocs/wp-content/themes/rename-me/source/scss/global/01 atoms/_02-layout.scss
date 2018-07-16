@@ -8,11 +8,12 @@
 // Flex (Columns px)
 //----------------------
 .l_f\: {
-	@each $size in $containers {
+
+	@each $size in $flex {
 		&#{$size} { flex: 0 0 #{$size}px; max-width: #{$size}px; }
 		&#{$size}\[s\] { flex: 1 1 #{$size}px; width: #{$size}px; }
-		&#{$size}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
-		&#{$size}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+		&#{$size}\[-30\] { flex: 0 0 calc(#{$size} - 30px); max-width: calc(#{$size} - 30px);  }
+		&#{$size}\[s\]\[-30\] { flex: 1 1 calc(#{$size} - 30px); width: calc(#{$size} - 30px);  }
 	}
 }
 
@@ -20,11 +21,11 @@
 @each $keyword, $size in $bp {
 	@include mq($size) {
 		.\{#{$keyword}\}l_f\: {
-			@each $size in $containers {
+			@each $size in $flex {
 				&#{$size} { flex: 0 0 #{$size}px; max-width: #{$size}px; }
 				&#{$size}\[s\] { flex: 1 1 #{$size}px; width: #{$size}px; }
-				&#{$size}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
-				&#{$size}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+				&#{$size}\[-30\] { flex: 0 0 calc(#{$size} - 30px); max-width: calc(#{$size} - 30px);  }
+				&#{$size}\[s\]\[-30\] { flex: 1 1 calc(#{$size} - 30px); width: calc(#{$size} - 30px);  }
 			}
 		}
 	}
@@ -38,10 +39,13 @@
 	@each $keyword, $size in $cols {
 		&#{$keyword} { flex: 0 0 #{$size}; max-width: #{$size}; }
 		&#{$keyword}\[s\] { flex: 1 1 #{$size}; width: #{$size}; }
-		&#{$keyword}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px);  }
-		&#{$keyword}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px);  }
+		&#{$keyword}\[-30\] { flex: 0 0 calc(#{$size} - 30px); max-width: calc(#{$size} - 30px);  }
+		&#{$keyword}\[s\]\[-30\] { flex: 1 1 calc(#{$size} - 30px); width: calc(#{$size} - 30px);  }
 	}
+
+	&auto { flex: 0 0 auto; max-width: none; width: auto;  }
 }
+
 
 // breakpoints for flex.
 @each $keyword, $size in $bp {
@@ -50,9 +54,11 @@
 			@each $keyword, $size in $cols {
 				&#{$keyword} { flex: 0 0 #{$size}; max-width: #{$size}; }
 				&#{$keyword}\[s\] { flex: 1 1 #{$size}; width: #{$size}; }
-				&#{$keyword}\[-20\] { flex: 0 0 calc(#{$size} - 20px); max-width: calc(#{$size} - 20px); }
-				&#{$keyword}\[s\]\[-20\] { flex: 1 1 calc(#{$size} - 20px); width: calc(#{$size} - 20px); }
+				&#{$keyword}\[-30\] { flex: 0 0 calc(#{$size} - 30px); max-width: calc(#{$size} - 30px); }
+				&#{$keyword}\[s\]\[-30\] { flex: 1 1 calc(#{$size} - 30px); width: calc(#{$size} - 30px); }
 			}
+
+			&auto { flex: 0 0 auto; max-width: none; width: auto;  }
 		}
 	}
 }
