@@ -17,5 +17,5 @@
 // Transition
 //----------------------
 @each $keyword, $time in $transition-times {
-	.i_t\:#{$keyword} { transition-time: $time; }
+	.i_t\:#{$keyword} { transition: all $time; }
 }

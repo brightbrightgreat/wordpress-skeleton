@@ -16,7 +16,7 @@
 	@each $number, $shade in $color {
 		.t_c\:#{$name}-#{$number},
 		.t_h\:#{$name}-#{$number}:hover,
-		.u_hp:hover .t_h_#{$name}-#{$number} {
+		.u_hp:hover .t_h\:#{$name}-#{$number} {
 			color: $shade;
 		}
 	}
@@ -103,7 +103,7 @@ h6,
 }
 
 .t_body-copy {
-	
+
 }
 
 
@@ -139,34 +139,21 @@ h6,
 		margin: 1em 0;
 	}
 
+	ul,
+	ol {
+		margin-left: 30px;
+		margin-right: 30px;
+
+		&:not(:first-child) { margin-top: 30px; }
+		&:not(:last-child) { margin-bottom: 30px; }
+	}
+
 	li {
-		position: relative;
-		margin: 0.5em 30px;
-
-		&:before {
-			position: absolute;
-			left: -30px;
-		}
+		list-style-position: inside;
 	}
 
-	ul li:before {
-		display: block;
-		top: 0.6em;
-		width: 5px;
-		height: 5px;
-		background: currentColor;
-		border-radius: 50%;
-		content: '';
-	}
-
-	ol { counter-reset: olCounter; }
-
-	ol li { counter-increment: olCounter; }
-
-	ol li:before {
-		font-style: normal;
-		content: counter(olCounter) ".";
-	}
+	ol li { list-style-type: decimal; }
+	ul li { list-style-type: disc; }
 
 	table {
 		font-weight: 400;
