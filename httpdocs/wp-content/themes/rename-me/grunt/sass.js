@@ -1,6 +1,9 @@
+const sass = require('node-sass');
+
 module.exports = {
 	options: {
-		style: 'expanded'
+		style: 'expanded',
+		implementation: sass,
 	},
 
 	global: {

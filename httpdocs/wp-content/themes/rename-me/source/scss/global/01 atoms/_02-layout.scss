@@ -75,7 +75,7 @@
 //----------------------
 // Max widths.
 //----------------------
-@each $size in $containers {
+@each $size in $mw {
 	.l_mw\:#{$size} { max-width: #{$size}px; }
 }
 
@@ -83,7 +83,7 @@
 @each $keyword, $size in $bp {
 	@include mq($size) {
 		.\{#{$keyword}\} {
-			@each $size in $containers {
+			@each $size in $mw {
 				&l_mw\:#{$size} { max-width: #{$size}px; }
 			}
 		}
