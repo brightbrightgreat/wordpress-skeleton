@@ -24,9 +24,11 @@
 
 11. Run `npm install` in the theme directory to install grunt.
 
-12. Run `grunt watch` in the theme directory while working to run grunt.
+12. Run `composer update` to generate the autoload files.
 
-13. Replace this README.md with the SAMPLE-README.md in this directory. Fill out the information about the project in that file.
+13. Run `grunt watch` in the theme directory while working to run grunt.
+
+14. Replace this README.md with the SAMPLE-README.md in this directory. Fill out the information about the project in that file.
 
 
 ## Help

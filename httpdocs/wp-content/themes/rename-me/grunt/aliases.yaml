@@ -11,15 +11,14 @@ css:
   - 'sass_globbing'
   - 'sass'
   - 'postcss'
-  - 'modernizr'
-  - compress
+  - 'compress'
 
 # Our script related tasks
 javascript:
-  - 'jshint'
+  - 'eslint:check'
   - 'uglify'
-  - 'modernizr'
-  - 'compress'
+  - 'compress:js'
+  - 'compress:jsbr'
 
 # Image related tasks
 svgs:

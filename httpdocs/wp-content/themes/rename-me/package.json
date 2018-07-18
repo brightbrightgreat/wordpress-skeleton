@@ -1,11 +1,11 @@
 {
-	"name": "#REPLACE-CLIENTSLUGNAME",
+	"name": "stern-pinball",
 	"version": "1.0.0",
 	"author": "Bright Bright Great (http://brightbrightgreat.com)",
-	"homepage": "#REPLACE-PROJECTURL",
+	"homepage": "https://sternpinball.com",
 	"repository": {
 		"type": "git",
-		"url": "#REPLACE-REPOURL"
+		"url": "https://github.com/brightbrightgreat/sternpinball"
 	},
 	"devDependencies": {
 		"autoprefixer": "*",
@@ -14,11 +14,8 @@
 		"grunt-blobfolio": "git+ssh://git@blobfolio.com:3417/grunt-blobfolio",
 		"grunt-contrib-clean": "^1.*",
 		"grunt-contrib-compress": "*",
-		"grunt-contrib-jshint": "*",
-		"grunt-contrib-sass": "*",
-		"grunt-contrib-uglify": "*",
+		"grunt-eslint": "*",
 		"grunt-contrib-watch": "*",
-		"grunt-modernizr": "*",
 		"grunt-notify": "*",
 		"grunt-postcss": "*",
 		"grunt-sass": "*",
@@ -26,9 +23,11 @@
 		"grunt-svgmin": "*",
 		"load-grunt-config": "*",
 		"load-grunt-tasks": "*",
-		"postcss-fixes": "*"
+		"postcss-fixes": "*",
+		"grunt-contrib-uglify-es": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony"
 	},
 	"dependencies": {
-		"growl": "^1.10.3"
+		"growl": "^1.10.3",
+		"node-sass": "^4.9.2"
 	}
 }

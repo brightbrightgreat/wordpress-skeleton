@@ -5,7 +5,6 @@ module.exports = {
 		},
 		options: {
 			useSingleQuotes: false,
-			signature: '// Hello, World!'
 		}
 	}
 };

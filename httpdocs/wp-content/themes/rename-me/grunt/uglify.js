@@ -1,5 +1,9 @@
 module.exports = {
 
+	options: {
+		sourceMap: true
+	},
+
 	global: {
 		files: [{
 			cwd: '<%= paths.js.global %>',
