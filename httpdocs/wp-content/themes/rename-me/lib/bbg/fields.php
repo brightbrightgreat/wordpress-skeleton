@@ -109,7 +109,9 @@ class fields extends \bbg\wp\common\base\hook {
 					Field::make('complex', $prefix . 'buttons', 'Buttons')
 					->add_fields(
 						fields::clone_fields('link')
-					),
+					)
+					->set_layout('tabbed-vertical')
+					->set_header_template('<%- link_text %>'),
 				);
 				break;
 
