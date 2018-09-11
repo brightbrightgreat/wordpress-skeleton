@@ -76,15 +76,12 @@ define('BBG_SITE_COLORS', array(
 // We're going to loop through the site colors, and generate nice arrays
 // for text and bg colors. These can be used e.g. when defining field
 // options.
-$text_colors = array();
-$bg_colors = array();
+$nice_colors = array();
 
 foreach (BBG_SITE_COLORS as $c) {
-	$text_colors['t_c:' . $c . '-400'] = ucwords($c);
-	$bg_colors['v_bc:' . $c . '-400'] = ucwords($c);
+	$nice_colors[$c] = ucwords(str_replace('-', ' ', $c));
 }
 
-define('BBG_TEXT_COLORS', $text_colors);
-define('BBG_BG_COLORS', $bg_colors);
+define('BBG_NICE_COLORS', $nice_colors);
 
 // --------------------------------------------------------------------- end misc

@@ -8,7 +8,6 @@
 // Flex (Columns px)
 //----------------------
 .l_f\: {
-
 	@each $size in $flex {
 		&#{$size} { flex: 0 0 #{$size}px; max-width: #{$size}px; }
 		&#{$size}\[s\] { flex: 1 1 #{$size}px; width: #{$size}px; }

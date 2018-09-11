@@ -54,7 +54,7 @@ class buttons extends \bbg\wp\common\base\partial {
 
 		if (count($args['buttons'])) { ?>
 			<div
-			class="js_animate js_animateable d:f d_fw:w
+			class="d:f d_fw:w
 			d_ai:<?=$args['v_align']?> d_jc:<?=$args['h_align']?>
 			m:btn-group
 			<?=implode(' ', $args['group_classes'])?>">
