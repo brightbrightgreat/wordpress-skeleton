@@ -4,19 +4,21 @@
 //----------------------
 // Display types.
 //----------------------
-.d\:f { display: flex; }
-.d\:b { display: block; }
-.d\:n { display: none; }
-.d\:i { display: inline; }
+.d\: {
+	&f { display: flex; }
+	&b  display: block;
+	&n { display: none; }
+	&i { display: inline; }
+}
 
 // break points for display types.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d\:f { display: flex; }
-			&d\:b { display: block; }
-			&d\:n { display: none; }
-			&d\:i { display: inline; }
+		.\{#{$keyword}\}d\: {
+			&f { display: flex; }
+			&b  display: block;
+			&n { display: none; }
+			&i { display: inline; }
 		}
 	}
 }
@@ -25,24 +27,30 @@
 //----------------------
 // Z-index.
 //----------------------
-.d_z\:-1 { z-index: -1; }
-.d_z\:1 { z-index: 1; }
+.d_z\: {
+	&-1 { z-index: -1; }
+	&1 { z-index: 1; }
+}
 
 
 //----------------------
 // Align-items
 //----------------------
-.d_ai\:fs { align-items: flex-start; }
-.d_ai\:c { align-items: center; }
-.d_ai\:fe { align-items: flex-end; }
+.d_ai\: {
+	&s { align-items: stretch; }
+	&fs { align-items: flex-start; }
+	&c { align-items: center; }
+	&fe { align-items: flex-end; }
+}
 
 // break points for align-items.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d_ai\:fs { align-items: flex-start; }
-			&d_ai\:c { align-items: center; }
-			&d_ai\:fe { align-items: flex-end; }
+		.\{#{$keyword}\}d_ai\: {
+			&s { align-items: stretch; }
+			&fs { align-items: flex-start; }
+			&c { align-items: center; }
+			&fe { align-items: flex-end; }
 		}
 	}
 }
@@ -51,17 +59,21 @@
 //----------------------
 // Align-self
 //----------------------
-.d_as\:fs { align-self: flex-start; }
-.d_as\:c { align-self: center; }
-.d_as\:fe { align-self: flex-end; }
+.d_as\: {
+	&s { align-self: stretch; }
+	&fs { align-self: flex-start; }
+	&c { align-self: center; }
+	&fe { align-self: flex-end; }
+}
 
 // break points for align-self.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d_as\:fs { align-self: flex-start; }
-			&d_as\:c { align-self: center; }
-			&d_as\:fe { align-self: flex-end; }
+		.\{#{$keyword}\}d_as\: {
+			&s { align-self: stretch; }
+			&fs { align-self: flex-start; }
+			&c { align-self: center; }
+			&fe { align-self: flex-end; }
 		}
 	}
 }
@@ -70,21 +82,23 @@
 //----------------------
 // Justify-content
 //----------------------
-.d_jc\:fs { justify-content: flex-start; }
-.d_jc\:sa { justify-content: space-around; }
-.d_jc\:sb { justify-content: space-between; }
-.d_jc\:c { justify-content: center; }
-.d_jc\:fe { justify-content: flex-end; }
+.d_jc\: {
+	&fs { justify-content: flex-start; }
+	&sa { justify-content: space-around; }
+	&sb { justify-content: space-between; }
+	&c { justify-content: center; }
+	&fe { justify-content: flex-end; }
+}
 
 // break points for justify-content.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d_jc\:fs { justify-content: flex-start; }
-			&d_jc\:sa { justify-content: space-around; }
-			&d_jc\:sb { justify-content: space-between; }
-			&d_jc\:c { justify-content: center; }
-			&d_jc\:fe { justify-content: flex-end; }
+		.\{#{$keyword}\}d_jc\: {
+			&fs { justify-content: flex-start; }
+			&sa { justify-content: space-around; }
+			&sb { justify-content: space-between; }
+			&c { justify-content: center; }
+			&fe { justify-content: flex-end; }
 		}
 	}
 }
@@ -93,13 +107,18 @@
 //----------------------
 // Flex-wrap.
 //----------------------
-.d_fw\:w { flex-wrap: wrap; }
-.d_fw\:wr { flex-wrap: wrap-reverse; }
+.d_fw\: {
+	&nw { flex-wrap: nowrap; }
+	&w { flex-wrap: wrap; }
+	&wr { flex-wrap: wrap-reverse; }
+}
 
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d_fw\:n { flex-wrap: nowrap;; }
+		.\{#{$keyword}\}d_fw\: {
+			&nw { flex-wrap: nowrap; }
+			&w { flex-wrap: wrap; }
+			&wr { flex-wrap: wrap-reverse; }
 		}
 	}
 }
@@ -108,12 +127,16 @@
 //----------------------
 // Flex-direction
 //----------------------
-.d_fd\:c { flex-direction: column; }
+.d_fd\: {
+	&r { flex-direction: row; }
+	&c { flex-direction: column; }
+}
 // break points for justify-content.
 @each $keyword, $size in $bp {
 	@include mq($size) {
-		.\{#{$keyword}\} {
-			&d_fd\:c { flex-direction: column; }
+		.\{#{$keyword}\}d_fd\: {
+			&r { flex-direction: row; }
+			&c { flex-direction: column; }
 		}
 	}
 }

@@ -82,17 +82,11 @@ class text extends \bbg\wp\common\base\partial {
 	protected static function build_content(string &$str, string $id, array $args) {
 		ob_start(); ?>
 
-		<?php if ($args['preheadline']) {?>
-			<div class="l_m-b:20 t_h6 t_c:<?=$args['sub_color']?>"><?=$args['preheadline']?></div>
-		<?php } ?>
+		<?php if ($args['headline']) {
 
-
-		<?php if ($args['headline']) { ?>
-
-			<?php
 			if ($args['links'] && count($args['links']) === 1) { ?>
 
-					<h2 class="js_animate js_animateable <?=implode(' ', $args['headline_classes'])?>">
+					<h2 class="<?=implode(' ', $args['headline_classes'])?>">
 						<a
 						href="<?=$args['links'][0]['url']?>"
 						class="<?=implode($args['links'][0]['classes'], ' ')?>"
@@ -103,16 +97,12 @@ class text extends \bbg\wp\common\base\partial {
 			<?php }
 
 			else { ?>
-				<h2 class="js_animate js_animateable <?=implode(' ', $args['headline_classes'])?>"><?=$args['headline']?></h2>
+				<h2 class="<?=implode(' ', $args['headline_classes'])?>"><?=$args['headline']?></h2>
 			<?php } ?>
-		<?php } ?>
+		<?php }
 
-		<?php if ($args['subheadline']) { ?>
-			<div class="js_animate js_animateable t_accent[sm] t_w:600 t_t:u"><?=$args['subheadline']?></div>
-		<?php } ?>
-
-		<?php if ($args['text']) { ?>
-			<div class="js_animate js_animateable t_body-copy t_wysiwyg"><?=$args['text']?></div>
+		if ($args['text']) { ?>
+			<div class="t_body t_wysiwyg"><?=$args['text']?></div>
 		<?php }
 
 		if (count($args['buttons'])) {
@@ -126,9 +116,7 @@ class text extends \bbg\wp\common\base\partial {
 				'h_align'=>$args['button_h_align'],
 			));
 		}
-		?>
 
-		<?php
 		$str = ob_get_clean();
 		return $str;
 	}
