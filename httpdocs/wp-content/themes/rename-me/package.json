@@ -5,7 +5,7 @@
 	"homepage": "#REPLACE-PROJECTURL",
 	"repository": {
 		"type": "git",
-		"url": "#REPLACE-REPOURL",
+		"url": "#REPLACE-REPOURL"
 	},
 	"devDependencies": {
 		"autoprefixer": "*",
