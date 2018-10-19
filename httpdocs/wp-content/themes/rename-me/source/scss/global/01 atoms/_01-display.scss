@@ -6,7 +6,7 @@
 //----------------------
 .d\: {
 	&f { display: flex; }
-	&b  display: block;
+	&b { display: block; }
 	&n { display: none; }
 	&i { display: inline; }
 }
@@ -16,7 +16,7 @@
 	@include mq($size) {
 		.\{#{$keyword}\}d\: {
 			&f { display: flex; }
-			&b  display: block;
+			&b { display: block; }
 			&n { display: none; }
 			&i { display: inline; }
 		}

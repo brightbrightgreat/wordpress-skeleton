@@ -1,11 +1,11 @@
 {
-	"name": "stern-pinball",
+	"name": "#REPLACE-CLIENTSLUGNAME",
 	"version": "1.0.0",
 	"author": "Bright Bright Great (http://brightbrightgreat.com)",
-	"homepage": "https://sternpinball.com",
+	"homepage": "#REPLACE-PROJECTURL",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/brightbrightgreat/sternpinball"
+		"url": "#REPLACE-REPOURL"
 	},
 	"devDependencies": {
 		"autoprefixer": "*",
