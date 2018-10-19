@@ -65,7 +65,11 @@ class fields extends \bbg\wp\common\base\hook {
 					)),
 
 					// Internal link.
+					// Internal link.
 					Field::make('association', $prefix . 'link_internal', 'Select')
+					->set_max(1)
+					->set_required(true)
+					->set_types(\bbg\wp\common\base\fields::get_linkables())
 					->set_conditional_logic(array(array(
 						'field'=>$prefix . 'link_type',
 						'value'=>'internal',
